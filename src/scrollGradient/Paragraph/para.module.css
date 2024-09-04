@@ -1,0 +1,91 @@
+.main {
+  font-size: 30px;
+  color: black;
+  background-color: red;
+  height: 100vh;
+  width: 75%;
+}
+
+.parent {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  /* background-image: linear-gradient(
+    90deg,
+    black 1%,
+    orange 50%,
+    black 100%,
+    transparent
+  ); */
+
+  background-image: linear-gradient(
+    to left,
+    #000000,
+    #8f5c00,
+    #eb9800,
+    #ffa500,
+    #ffa500,
+    #ffa500,
+    #ffa500,
+    #ad7000,
+    #000000
+  );
+}
+
+.wordParent {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 75%;
+  padding: 60px;
+  flex-wrap: wrap;
+  font-size: 30px;
+  margin: 0 auto;
+}
+
+.words {
+  position: relative;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.shadow {
+  position: absolute;
+  opacity: 0.2;
+  font-size: 32px;
+  font-weight: 600;
+}
+/* .word {
+  margin-right: 10px;
+} */
+
+@media only screen and (max-width: 400px) {
+  .words {
+    font-size: 30px;
+  }
+
+  .shadow {
+    font-size: 30px;
+  }
+
+  .wordParent {
+    gap: 7px;
+    width: 70% !important;
+    padding: 70px 30px;
+  }
+
+  .parent {
+    background-image: linear-gradient(
+      to left,
+      #000000,
+      #ffa500,
+      #ffa500,
+      #ffa500,
+      #ffa500,
+      #ffa500,
+      #ffa500,
+      #ffa500,
+      #000000
+    );
+  }
+}

@@ -1,0 +1,29 @@
+.main {
+  height: auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainParent {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+.langTitle {
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.progressParent {
+  background-color: orange;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  overflow: hidden;
+}

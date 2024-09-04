@@ -1,0 +1,59 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.langTitle {
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
+}
+
+.parent .main .progress .ant-progress .ant-progress-inner .ant-progress-text {
+  background-color: aqua !important;
+  height: 300px;
+  color: orange !important;
+}
+
+.ant-progress.ant-progress-circle .ant-progress-text {
+  color: green !important;
+}
+
+:where(.css-dev-only-do-not-override-1uq9j6g).ant-progress.ant-progress-circle
+  .ant-progress-text {
+  color: red !important;
+}
+
+.parent {
+  transition: 0.5s;
+  /* overflow: hidden; */
+  display: flex;
+  flex-direction: row;
+  transition: 0.5s;
+  justify-content: space-evenly;
+}
+
+.progressParent {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 468px) {
+  .parent {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .progressParent {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* .main {
+    gap: 30px;
+  } */
+}

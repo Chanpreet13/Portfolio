@@ -1,0 +1,34 @@
+.main {
+  height: 100vh;
+  font-weight: 600;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  color: white;
+  align-items: center;
+  position: absolute;
+  mask-image: url("../../../../public/shape-circle.svg");
+  background: orange;
+  mask-repeat: no-repeat;
+  mask-position: 20%;
+  mask-size: 40px;
+}
+
+.main div {
+  margin-left: 10%;
+}
+
+.main div p {
+  color: black;
+  margin: 0;
+}
+
+.content {
+  font-size: 40px;
+}
+
+@media only screen and (min-width: 300px) {
+  .content {
+    font-size: 30px;
+  }
+}
