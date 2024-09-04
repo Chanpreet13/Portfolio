@@ -25,6 +25,7 @@ const Paragraph = ({ para, bgClr, txtClr, width }) => {
             const end = start + 1 / renderParagraph.length;
 
             return (
+              <div key={i}>
               <WordComponent
                 index={i}
                 value={e}
@@ -32,6 +33,7 @@ const Paragraph = ({ para, bgClr, txtClr, width }) => {
                 progress={scrollYProgress}
                 txtClr={txtClr}
               />
+              </div>
             );
           })}
         </div>
@@ -43,14 +45,12 @@ const Paragraph = ({ para, bgClr, txtClr, width }) => {
 const WordComponent = ({ value, index, range, progress, txtClr }) => {
   const opacity = useTransform(progress, range, [0, 1]);
   return (
-    <>
+    <div key={index} >
       <span
-      key={index}
         className={styles.words}
         style={{ color: txtClr ? txtClr : "black" }}
       >
         <span
-        key={index}
           className={styles.shadow}
           style={{ color: txtClr ? txtClr : "black" }}
         >
@@ -59,7 +59,7 @@ const WordComponent = ({ value, index, range, progress, txtClr }) => {
 
         <motion.span style={{ opacity: opacity }}>{value}</motion.span>
       </span>
-    </>
+    </div>
   );
 };
 export default Paragraph;

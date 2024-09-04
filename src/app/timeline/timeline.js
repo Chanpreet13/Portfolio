@@ -30,8 +30,8 @@ const Timeline = () => {
                     )}
                     {e?.expertise && (
                       <ul>
-                        {e?.expertise.map((lang) => {
-                          return <li>{lang} </li>;
+                        {e?.expertise.map((lang, i) => {
+                          return <li key={i} >{lang} </li>;
                         })}
                       </ul>
                     )}
@@ -39,8 +39,8 @@ const Timeline = () => {
                     {e?.lang && (
                       <ul>
                         {" "}
-                        {e.lang.map((e) => {
-                          return <li>{e}</li>;
+                        {e.lang.map((e, i) => {
+                          return <li key={i} >{e}</li>;
                         })}
                       </ul>
                     )}
