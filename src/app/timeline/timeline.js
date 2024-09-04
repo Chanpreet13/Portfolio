@@ -6,7 +6,7 @@ const Timeline = () => {
     <>
       {renderData.map((val, idx) => {
         return (
-          <div className={styles.timelineParent}>
+          <div className={styles.timelineParent} key={idx}>
             <Reveal horizon={revealAnimationVertically}>
               <div className={styles.circleAndBorderParent}>
                 <div className={styles.circleParent}></div>
@@ -17,9 +17,8 @@ const Timeline = () => {
             <div className={styles.timelineContentParent}>
               <div className={styles.title}>{val.title}</div>
               {val.subData?.map((e, index) => {
-                console.log(e?.expertise);
                 return (
-                  <>
+                  <div key={index}>
                     {e?.subTitle && (
                       <div className={styles.subtitle}>{e?.subTitle}</div>
                     )}
@@ -45,7 +44,7 @@ const Timeline = () => {
                         })}
                       </ul>
                     )}
-                  </>
+                  </div>
                 );
               })}
             </div>

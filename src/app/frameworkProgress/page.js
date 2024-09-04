@@ -30,24 +30,14 @@ const FrameworkProgress = ({ languages, movement }) => {
         >
           {languages.map((e, idx) => {
             return (
-              <div className={styles.main}>
+              <div className={styles.main} key={idx}>
                 <span className={styles.langTitle}>{e.lang}</span>
-                {/* <Progress
-                  style={{ color: "white" }}
-                  size={180}
-                  className={styles.progress}
-                  strokeColor="white"
-                  type="circle"
-                  // trailColor="black"
-                  // showInfo={true}
-                  percent={e.percent}
-                /> */}
+             
                 <div style={{ position: "relative" }}>
                   <CircularProgress
                     variant="determinate"
                     value={e.percent}
                     sx={{ color: "white" }}
-                    // color="primary"
                     size={180}
                     title="Helo"
                   />

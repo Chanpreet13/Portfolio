@@ -45,10 +45,12 @@ const WordComponent = ({ value, index, range, progress, txtClr }) => {
   return (
     <>
       <span
+      key={index}
         className={styles.words}
         style={{ color: txtClr ? txtClr : "black" }}
       >
         <span
+        key={index}
           className={styles.shadow}
           style={{ color: txtClr ? txtClr : "black" }}
         >
