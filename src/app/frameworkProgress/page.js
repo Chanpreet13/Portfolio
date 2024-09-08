@@ -1,10 +1,11 @@
 "use client";
 import { useRef } from "react";
 import styles from "./style.module.css";
-
 import { motion, useScroll, useTransform } from "framer-motion";
 import { CircularProgress } from "@mui/material";
+
 const FrameworkProgress = ({ languages, movement }) => {
+
   const elementRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -28,7 +29,7 @@ const FrameworkProgress = ({ languages, movement }) => {
                 : leftToRightHorizon,
           }}
         >
-          {languages.map((e, idx) => {
+          {languages?.map((e, idx) => {
             return (
               <div className={styles.main} key={idx}>
                 <span className={styles.langTitle}>{e.lang}</span>
